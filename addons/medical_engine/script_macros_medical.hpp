@@ -58,7 +58,7 @@
 
 // Minimum blood volume, in liters, for a patient to have the chance to wake up
 #define MINIMUM_BLOOD_FOR_STABLE_VITALS EGVAR(medical,const_stableVitalsBloodThreshold)
-#define MINIMUM_BLOOD_FOR_STABLE_VITALS_DEFAULT BLOOD_VOLUME_CLASS_2_HEMORRHAGE
+#define MINIMUM_BLOOD_FOR_STABLE_VITALS_DEFAULT BLOOD_VOLUME_CLASS_3_HEMORRHAGE
 
 // IV Change per second calculation:
 // 250 ml should take 60 seconds to fill. 250 ml / 60 s ~ 4.1667 ml/s.
@@ -134,8 +134,6 @@
 
 #define DEFAULT_FRACTURE_VALUES [0,0,0,0,0,0]
 
-#define DEFAULT_BODYPART_DAMAGE_VALUES [0,0,0,0,0,0]
-
 // Triage colors, for consistency across UIs and functions
 #define TRIAGE_COLOR_NONE      0, 0, 0, 0.9
 #define TRIAGE_COLOR_MINIMAL   0, 0.5, 0, 0.9
@@ -170,7 +168,6 @@
 #define VAR_OPEN_WOUNDS       QEGVAR(medical,openWounds)
 #define VAR_BANDAGED_WOUNDS   QEGVAR(medical,bandagedWounds)
 #define VAR_STITCHED_WOUNDS   QEGVAR(medical,stitchedWounds)
-#define VAR_BODYPART_DAMAGE   QEGVAR(medical,bodyPartDamage)
 // These variables track gradual adjustments (from medication, etc.)
 #define VAR_MEDICATIONS       QEGVAR(medical,medications)
 // These variables track the current state of status values above
@@ -200,7 +197,6 @@
 #define GET_BANDAGED_WOUNDS(unit)   (unit getVariable [VAR_BANDAGED_WOUNDS, createHashMap])
 #define GET_STITCHED_WOUNDS(unit)   (unit getVariable [VAR_STITCHED_WOUNDS, createHashMap])
 #define GET_DAMAGE_THRESHOLD(unit)  (unit getVariable [QEGVAR(medical,damageThreshold), [EGVAR(medical,AIDamageThreshold),EGVAR(medical,playerDamageThreshold)] select (isPlayer unit)])
-#define GET_BODYPART_DAMAGE(unit)   (unit getVariable [VAR_BODYPART_DAMAGE, DEFAULT_BODYPART_DAMAGE_VALUES])
 
 // The following function calls are defined here just for consistency
 #define GET_BLOOD_LOSS(unit)        ([unit] call EFUNC(medical_status,getBloodLoss))
