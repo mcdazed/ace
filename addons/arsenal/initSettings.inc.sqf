@@ -10,11 +10,10 @@ private _category = LLSTRING(settingCategory);
 
 [
     QGVAR(enableModIcons),
-    "LIST",
+    "CHECKBOX",
     [LSTRING(modIconsSetting), LSTRING(modIconsTooltip)],
     _category,
-    [[0, 1, 2], [ELSTRING(common,Disabled), ELSTRING(common,Enabled), LSTRING(DLCRequirement)], 1],
-    false
+    true
 ] call CBA_fnc_addSetting;
 
 [
@@ -74,22 +73,13 @@ private _loadoutCategory = LLSTRING(loadoutSubcategory);
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(showUnavailableItems),
-    "LIST",
-    [LSTRING(unavailableItemsSetting), LSTRING(unavailableItemsTooltip)],
-    [_category, _loadoutCategory],
-    [[0, 1, 2], [ELSTRING(common,Disabled), ELSTRING(common,Enabled), ELSTRING(common,Debug)], 0],
-    2 // never overwrite the client
-] call CBA_fnc_addSetting;
-
-[
     QGVAR(EnableRPTLog),
     "CHECKBOX",
     [LSTRING(printToRPTSetting),
     LSTRING(printToRPTTooltip)],
     [_category, _loadoutCategory],
     false,
-    2 // never overwrite the client
+    false
 ] call CBA_fnc_addSetting;
 
 [

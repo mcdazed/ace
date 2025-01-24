@@ -41,4 +41,3 @@ PREP(triggerType);
 PREP(allowDefuse);
 PREP(isAllowedDefuse);
 PREP(checkDetonateHandlers);
-PREP(woundsHandlerToePopper);

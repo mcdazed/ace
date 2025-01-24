@@ -11,7 +11,7 @@ if (!hasInterface) exitWith {};
 GVAR(tempWindInfo) = false;
 
 // Add keybinds
-["ACE3 Weapons", QGVAR(prepare), LLSTRING(Prepare), {
+["ACE3 Weapons", QGVAR(prepare), localize LSTRING(Prepare), {
     // Condition
     if !([ACE_player] call FUNC(canPrepare)) exitWith {false};
     if (EGVAR(common,isReloading)) exitWith {true};
@@ -20,9 +20,9 @@ GVAR(tempWindInfo) = false;
     [ACE_player] call FUNC(prepare);
 
     true
-}, {false}, [34, [false, false, false]], false] call CBA_fnc_addKeybind; // false
+}, {false}, [34, [false, false, false]], false] call CBA_fnc_addKeybind; // G
 
-["ACE3 Weapons", QGVAR(dropModeToggle), LLSTRING(DropModeToggle), {
+["ACE3 Weapons", QGVAR(dropModeToggle), localize LSTRING(DropModeToggle), {
     // Condition
     if (!(ACE_player getVariable [QGVAR(inHand), false]) || {underwater ACE_player}) exitWith {false};
 
@@ -35,7 +35,7 @@ GVAR(tempWindInfo) = false;
     true
 }, {false}, [0, [false, false, false]], false] call CBA_fnc_addKeybind; // false
 
-["ACE3 Weapons", QGVAR(dropModeHold), LLSTRING(DropModeHold), {
+["ACE3 Weapons", QGVAR(dropModeHold), localize LSTRING(DropModeHold), {
     // Condition
     if !(ACE_player getVariable [QGVAR(inHand), false]) exitWith {false};
 
@@ -77,7 +77,7 @@ GVAR(tempWindInfo) = false;
     } else {
         params ["_interactionType"];
         // Ignore self-interaction menu, when in vehicle and when pick up is disabled
-        if (GVAR(enablePickUp) && {_interactionType == 0} && {isNull objectParent ACE_player}) then {
+        if (GVAR(enablePickUp) && {_interactionType == 0} && {vehicle ACE_player == ACE_player}) then {
             // Show pick up actions on CfgAmmo's
             call FUNC(renderPickUpInteraction);
         };

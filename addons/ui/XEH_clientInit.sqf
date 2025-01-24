@@ -48,7 +48,8 @@ GVAR(elementsSet) = createHashMap;
     }] call CBA_fnc_addEventHandler;
 }] call CBA_fnc_addEventHandler;
 
-[QUOTE(ADDON), "AnimChanged", LINKFUNC(onAnimChanged), true] call CBA_fnc_addBISPlayerEventHandler;
+[QUOTE(ADDON), "AnimChanged", LINKFUNC(onAnimChanged), true] call EFUNC(common,addPlayerEH);
+
 
 ["ACE3 Common", QGVAR(hideHud), localize LSTRING(hideHud), {
     GVAR(hideHud) = !(missionNamespace getVariable [QGVAR(hideHud), false]);
@@ -68,4 +69,4 @@ GVAR(elementsSet) = createHashMap;
     true
 },
 {false},
-[0, [false, false, false]], false] call CBA_fnc_addKeybind; // false
+[DIK_F12, [false, true, false]], false] call CBA_fnc_addKeybind; // ctrl+f12

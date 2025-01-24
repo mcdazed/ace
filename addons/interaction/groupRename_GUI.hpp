@@ -60,7 +60,7 @@ class GVAR(groupNameDisplay) {
             w = QUOTE(FONT_W * 6);
             h = QUOTE(ELEMENT_HEIGHT - FONT_W);
             sizeEx = QUOTE(FONT_H);
-            text = ECSTRING(common,Cancel);
+            text = CSTRING(CancelSelection);
         };
     };
 };

@@ -129,7 +129,6 @@ ace_nextmodeclass
 ace_modedescription
 ace_hearing_protection
 ace_hearing_lowerVolume
-ace_hearing_hasEHP
 ```
 
 

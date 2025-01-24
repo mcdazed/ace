@@ -23,14 +23,14 @@ if (!GVAR(addBuildingActions)) exitWith {};
 //Ignore self-interaction menu:
 if (_interactionType != 0) exitWith {};
 //Ignore when mounted:
-if (!isNull objectParent ACE_player) exitWith {};
+if ((vehicle ACE_player) != ACE_player) exitWith {};
 
 [{
     params ["_args", "_pfID"];
     _args params ["_setPosition", "_addedHelpers", "_housesScanned", "_housesToScanForActions"];
 
     if (!EGVAR(interact_menu,keyDown)) then {
-        deleteVehicle _addedHelpers;
+        {deleteVehicle _x;} forEach _addedHelpers;
         [_pfID] call CBA_fnc_removePerFrameHandler;
     } else {
         // Prevent Rare Error when ending mission with interact key down:

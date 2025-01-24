@@ -1,13 +1,12 @@
 #include "..\script_component.hpp"
 /*
- * Author: Glowbal, BaerMitUmlaut
+ * Author: Glowbal
  * Handle set volume calls. Will use the lowest available volume setting.
  *
  * Arguments:
  * 0: ID <STRING>
  * 1: Settings <NUMBER>
  * 2: Add (true) or remove (false) <BOOL> (default: true)
- * 3: Volume fade duration <NUMBER> (default: 0)
  *
  * Return Value:
  * None
@@ -18,26 +17,40 @@
  * Public: Yes
  */
 
-params ["_id", "_setting", ["_add", true], ["_fadeDuration", 0]];
+params ["_id", "_setting", ["_add", true]];
 
-_id = toLowerANSI _id;
+private _exists = false;
+private _lowestVolume = 1;
 
-// Save setting
-if (_add) then {
-    GVAR(setHearingCapabilityMap) set [_id, _setting];
-} else {
-    GVAR(setHearingCapabilityMap) deleteAt _id;
+GVAR(setHearingCapabilityMap) = GVAR(setHearingCapabilityMap) select {
+    _x params ["_xID", "_xSetting"];
+    if (_id == _xID) then {
+        _exists = true;
+        if (_add) then {
+            _x set [1, _setting];
+            _lowestVolume = _lowestVolume min _setting;
+            true
+        } else {
+            false
+        };
+    } else {
+        _lowestVolume = _lowestVolume min _xSetting;
+        true
+    };
 };
 
-private _lowestVolume = selectMin values GVAR(setHearingCapabilityMap);
+if (!_exists && _add) then {
+    _lowestVolume = _lowestVolume min _setting;
+    GVAR(setHearingCapabilityMap) pushBack [_id, _setting];
+};
 
-// In-game sounds
-_fadeDuration fadeSound _lowestVolume;
-_fadeDuration fadeRadio _lowestVolume;
+// in game sounds
+0 fadeSound _lowestVolume;
+0 fadeRadio _lowestVolume;
 if (GVAR(allowFadeMusic)) then {
-    _fadeDuration fadeMusic _lowestVolume;
+    0 fadeMusic _lowestVolume;
 };
 
-// Set radio mod variables
+// Set Radio mod variables.
 ACE_player setVariable ["tf_globalVolume", _lowestVolume];
 if (!isNil "acre_api_fnc_setGlobalVolume") then { [_lowestVolume^0.33] call acre_api_fnc_setGlobalVolume; };

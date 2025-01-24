@@ -15,10 +15,18 @@ private _cfgMagazines = configFile >> "CfgMagazines";
 private _cfgAmmo = configFile >> "CfgAmmo";
 private _cfgThrow = configFile >> "CfgWeapons" >> "Throw";
 
-GVAR(GrenadesAll) = compatibleMagazines "throw";
+{
+    private _magazines = getArray (_cfgThrow >> _x >> "magazines");
 
-GVAR(GrenadesNonFrag) = GVAR(GrenadesAll) select {getNumber (_cfgAmmo >> getText (_cfgMagazines >> _x >> "ammo") >> "explosive") == 0};
-GVAR(GrenadesFrag) = GVAR(GrenadesAll) - GVAR(GrenadesNonFrag);
+    GVAR(GrenadesAll) append _magazines;
+
+    {
+        private _ammo = getText (_cfgMagazines >> _x >> "ammo");
+        private _explosive = getNumber (_cfgAmmo >> _ammo >> "explosive");
+
+        ([GVAR(GrenadesFrag), GVAR(GrenadesNonFrag)] select (_explosive == 0)) pushBack _x;
+    } forEach _magazines;
+} forEach getArray (_cfgThrow >> "muzzles");
 
 #include "initSettings.inc.sqf"
 
