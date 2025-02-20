@@ -25,7 +25,7 @@
 // Chance to hit heart based on ratio of 70kg (approx. 70L) body to 70mL stroke volume of heart
 // Assuming torso is 50% of the body volume (35L)
 #define HEART_HIT_CHANCE EGVAR(medical,const_heartHitChance)
-#define HEART_HIT_CHANCE_DEFAULT 0.05
+#define HEART_HIT_CHANCE_DEFAULT 0
 
 #define MEDICAL_ACTION_DISTANCE 1.75
 
@@ -58,19 +58,19 @@
 
 // Minimum blood volume, in liters, for a patient to have the chance to wake up
 #define MINIMUM_BLOOD_FOR_STABLE_VITALS EGVAR(medical,const_stableVitalsBloodThreshold)
-#define MINIMUM_BLOOD_FOR_STABLE_VITALS_DEFAULT BLOOD_VOLUME_CLASS_2_HEMORRHAGE
+#define MINIMUM_BLOOD_FOR_STABLE_VITALS_DEFAULT BLOOD_VOLUME_CLASS_3_HEMORRHAGE
 
 // IV Change per second calculation:
 // 250 ml should take 60 seconds to fill. 250 ml / 60 s ~ 4.1667 ml/s.
-#define IV_CHANGE_PER_SECOND 4.1667 // in milliliters per second
+#define IV_CHANGE_PER_SECOND 35 // in milliliters per second
 
 // Minimum amount of damage required for penetrating wounds (also minDamage for velocity wounds)
 #define PENETRATION_THRESHOLD EGVAR(medical,const_penetrationThreshold)
-#define PENETRATION_THRESHOLD_DEFAULT 0.35
+#define PENETRATION_THRESHOLD_DEFAULT 0.2
 
 // To be replaced by a proper blood pressure calculation
 #define BLOOD_LOSS_KNOCK_OUT_THRESHOLD EGVAR(medical,const_bloodLossKnockOutThreshold)
-#define BLOOD_LOSS_KNOCK_OUT_THRESHOLD_DEFAULT 0.5 // 50% of cardiac output
+#define BLOOD_LOSS_KNOCK_OUT_THRESHOLD_DEFAULT 0.65 // 50% of cardiac output
 
 // Used to color interaction icons and body image selections
 #define BLOOD_LOSS_RED_THRESHOLD 0.5
@@ -94,11 +94,11 @@
 
 // Only relevant when advanced medication is disabled
 // Morphine pain suppression fade out time (time it takes until pain suppression is guaranteed to be completly gone)
-#define PAIN_SUPPRESSION_FADE_TIME 1800
+#define PAIN_SUPPRESSION_FADE_TIME 900
 
 // Chance to wake up when vitals are stable (checked once every SPONTANEOUS_WAKE_UP_INTERVAL seconds)
 #define SPONTANEOUS_WAKE_UP_INTERVAL EGVAR(medical,const_wakeUpCheckInterval)
-#define SPONTANEOUS_WAKE_UP_INTERVAL_DEFAULT 15
+#define SPONTANEOUS_WAKE_UP_INTERVAL_DEFAULT 5
 
 // Minimum leg damage required for limping
 #define LIMPING_DAMAGE_THRESHOLD EGVAR(medical,const_limpingDamageThreshold)
@@ -106,14 +106,14 @@
 
 // Minimum limb damage required for fracture
 #define FRACTURE_DAMAGE_THRESHOLD EGVAR(medical,const_fractureDamageThreshold)
-#define FRACTURE_DAMAGE_THRESHOLD_DEFAULT 0.50
+#define FRACTURE_DAMAGE_THRESHOLD_DEFAULT 0.5
 
 // Minimum cardiac output
 #define CARDIAC_OUTPUT_MIN EGVAR(medical,const_minCardiacOutput)
 #define CARDIAC_OUTPUT_MIN_DEFAULT 0.05
 
 // Minimum body part damage required for blood effect on uniform
-#define VISUAL_BODY_DAMAGE_THRESHOLD 0.35
+#define VISUAL_BODY_DAMAGE_THRESHOLD 0.5
 
 // Empty wound data, used for some default return values
 // [classID, amountOf, bloodloss, damage]
