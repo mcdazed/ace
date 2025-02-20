@@ -13,6 +13,7 @@ for %%I in (.) do set CurrDirName=%%~nxI
 echo %CurrDirName%
 
 taskkill /f /im arma3_x64.exe
+taskkill /f /im arma3launcher.exe
 taskkill /f /im arma3server_x64.exe
 taskkill /f /im arma3tools.exe
 taskkill /f /im steam.exe
