@@ -627,42 +627,42 @@ class ADDON {
     };
     class IV {
         // volume is in millileters
-        volume = 6000;
+        volume = 3000;
         ratio[] = {};
         rateCoef = 1; // multiplier for IV flow rate, for other methods of giving fluids
         type = "Blood";
         class BloodIV {
-            volume = 6000;
+            volume = 3000;
             ratio[] = {"Plasma", 1};
             rateCoef = 1;
         };
         class BloodIV_500: BloodIV {
-            volume = 3000;
-        };
-        class BloodIV_250: BloodIV {
             volume = 1500;
         };
+        class BloodIV_250: BloodIV {
+            volume = 750;
+        };
         class PlasmaIV: BloodIV {
-            volume = 6000;
+            volume = 3000;
             ratio[] = {"Blood", 1};
             type = "Plasma";
         };
         class PlasmaIV_500: PlasmaIV {
-            volume = 3000;
-        };
-        class PlasmaIV_250: PlasmaIV {
             volume = 1500;
         };
+        class PlasmaIV_250: PlasmaIV {
+            volume = 750;
+        };
         class SalineIV: BloodIV {
-            volume = 6000;
+            volume = 3000;
             type = "Saline";
             ratio[] = {};
         };
         class SalineIV_500: SalineIV {
-            volume = 3000;
+            volume = 1500;
         };
         class SalineIV_250: SalineIV {
-            volume = 1500;
+            volume = 750;
         };
     };
 };

@@ -54,7 +54,7 @@
 #define BLOOD_VOLUME_CLASS_3_HEMORRHAGE 4.200 // lost more than 30% blood, Class III Hemorrhage
 #define BLOOD_VOLUME_CLASS_4_HEMORRHAGE 3.600 // lost more than 40% blood, Class IV Hemorrhage
 // Lost more than 50% blood, Unrecoverable
-#define BLOOD_VOLUME_FATAL 3.0
+#define BLOOD_VOLUME_FATAL 0.05
 
 // Minimum blood volume, in liters, for a patient to have the chance to wake up
 #define MINIMUM_BLOOD_FOR_STABLE_VITALS EGVAR(medical,const_stableVitalsBloodThreshold)
@@ -62,15 +62,15 @@
 
 // IV Change per second calculation:
 // 250 ml should take 60 seconds to fill. 250 ml / 60 s ~ 4.1667 ml/s.
-#define IV_CHANGE_PER_SECOND 35 // in milliliters per second
+#define IV_CHANGE_PER_SECOND 20 // in milliliters per second
 
 // Minimum amount of damage required for penetrating wounds (also minDamage for velocity wounds)
 #define PENETRATION_THRESHOLD EGVAR(medical,const_penetrationThreshold)
-#define PENETRATION_THRESHOLD_DEFAULT 0.2
+#define PENETRATION_THRESHOLD_DEFAULT 0.0
 
 // To be replaced by a proper blood pressure calculation
 #define BLOOD_LOSS_KNOCK_OUT_THRESHOLD EGVAR(medical,const_bloodLossKnockOutThreshold)
-#define BLOOD_LOSS_KNOCK_OUT_THRESHOLD_DEFAULT 0.65 // 50% of cardiac output
+#define BLOOD_LOSS_KNOCK_OUT_THRESHOLD_DEFAULT 0.5 // 50% of cardiac output
 
 // Used to color interaction icons and body image selections
 #define BLOOD_LOSS_RED_THRESHOLD 0.5
@@ -98,11 +98,11 @@
 
 // Chance to wake up when vitals are stable (checked once every SPONTANEOUS_WAKE_UP_INTERVAL seconds)
 #define SPONTANEOUS_WAKE_UP_INTERVAL EGVAR(medical,const_wakeUpCheckInterval)
-#define SPONTANEOUS_WAKE_UP_INTERVAL_DEFAULT 5
+#define SPONTANEOUS_WAKE_UP_INTERVAL_DEFAULT 20
 
 // Minimum leg damage required for limping
 #define LIMPING_DAMAGE_THRESHOLD EGVAR(medical,const_limpingDamageThreshold)
-#define LIMPING_DAMAGE_THRESHOLD_DEFAULT 0.30
+#define LIMPING_DAMAGE_THRESHOLD_DEFAULT 0.5
 
 // Minimum limb damage required for fracture
 #define FRACTURE_DAMAGE_THRESHOLD EGVAR(medical,const_fractureDamageThreshold)
