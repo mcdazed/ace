@@ -50,7 +50,7 @@ if (!hasInterface) exitWith {};
     false
 },
 {false},
-[DIK_F1, [true, false, false]], true] call CBA_fnc_addKeybind; // Shift + F1
+[0, [false, false, false]], false] call CBA_fnc_addKeybind; // false
 
 ["isNotEscorting", {!GETVAR(_this select 0,GVAR(isEscorting),false)}] call EFUNC(common,addCanInteractWithCondition);
 ["isNotHandcuffed", {!GETVAR(_this select 0,GVAR(isHandcuffed),false)}] call EFUNC(common,addCanInteractWithCondition);
