@@ -110,4 +110,3 @@ GOTO end
 pause
 cls
 call push.bat
-winget remove hemtt
