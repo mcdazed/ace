@@ -56,9 +56,6 @@ robocopy "%ROOTDIR%\addons\interaction" "%ROOTDIR%\addonsx\interaction" /s /move
 robocopy "%ROOTDIR%\addons\inventory" "%ROOTDIR%\addonsx\inventory" /s /move
 robocopy "%ROOTDIR%\addons\magazinerepack" "%ROOTDIR%\addonsx\magazinerepack" /s /move
 robocopy "%ROOTDIR%\addons\main" "%ROOTDIR%\addonsx\main" /s /move
-robocopy "%ROOTDIR%\addons\map" "%ROOTDIR%\addonsx\map" /s /move
-robocopy "%ROOTDIR%\addons\marker_flags" "%ROOTDIR%\addonsx\marker_flags" /s /move
-robocopy "%ROOTDIR%\addons\markers" "%ROOTDIR%\addonsx\markers" /s /move
 robocopy "%ROOTDIR%\addons\missionmodules" "%ROOTDIR%\addonsx\missionmodules" /s /move
 robocopy "%ROOTDIR%\addons\modules" "%ROOTDIR%\addonsx\modules" /s /move
 robocopy "%ROOTDIR%\addons\nametags" "%ROOTDIR%\addonsx\nametags" /s /move
