@@ -18,5 +18,4 @@ class CfgPatches {
     };
 };
  
-#include "\z\ace\addons\missileguidance\script_missileBases.hpp"
 #include "CfgAmmo.hpp"
