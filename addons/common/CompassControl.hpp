@@ -19,7 +19,7 @@ class RscPicture;
 class RscControlsGroupNoScrollbars;
 
 class GVAR(CompassControl): RscControlsGroupNoScrollbars {
-    #pragma hemtt suppress pw3_padded_arg
+    //#pragma-backup-make.py hemtt suppress pw3_padded_arg
     onLoad = QUOTE(\
         params ['_control'];\
         private _display = ctrlParent _control;\
@@ -59,7 +59,7 @@ class GVAR(CompassControl): RscControlsGroupNoScrollbars {
             h = QUOTE(HEIGHT);
         };
         class CompassGroup: RscControlsGroupNoScrollbars {
-            #pragma hemtt suppress pw3_padded_arg
+            //#pragma-backup-make.py hemtt suppress pw3_padded_arg
             onLoad = QUOTE(\
                 params ['_control'];\
                 private _display = ctrlParent _control;\

@@ -1,4 +1,4 @@
-#pragma hemtt suppress pw3_padded_arg file
+//#pragma-backup-make.py hemtt suppress pw3_padded_arg file
 
 class RscDisplayEmpty;
 class GVAR(MainMenuHelperDumpDebug): RscDisplayEmpty {
