@@ -2,7 +2,7 @@ class Cfg3DEN {
     class Attributes {
         class Slider;
         class GVAR(slider): Slider {
-            //#pragma-backup-make.py hemtt suppress pw3_padded_arg
+            #pragma hemtt suppress pw3_padded_arg
             attributeLoad = QUOTE(\
                 params ['_ctrlGroup']; \
                 private _slider = _ctrlGroup controlsGroupCtrl 100; \
@@ -11,7 +11,7 @@ class Cfg3DEN {
                 _edit ctrlSetText ([ARR_3(_value,1,1)] call CBA_fnc_formatNumber); \
             );
             attributeSave = QUOTE(params ['_ctrlGroup']; sliderPosition (_ctrlGroup controlsGroupCtrl 100));
-            //#pragma-backup-make.py hemtt suppress pw3_padded_arg
+            #pragma hemtt suppress pw3_padded_arg
             onLoad = QUOTE(\
                 params ['_ctrlGroup']; \
                 private _slider = _ctrlGroup controlsGroupCtrl 100; \
