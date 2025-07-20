@@ -62,7 +62,7 @@ rd /s /q "%ROOTDIR%\addons"
 
 timeout /t 1 /nobreak
 
-ren "%ROOTDIR%\addonsx" "%ROOTDIR%\addons"
+robocopy /s /e /move "%ROOTDIR%\addonsx" "%ROOTDIR%\addons"
 
 pause
 exit
