@@ -1417,7 +1417,7 @@ See the make.cfg file for additional build options.
                     # Call AddonBuilder
                     os.chdir("P:\\")
 
-                    cmd = [addonbuilder, os.path.join(work_drive, prefix, module), os.path.join(make_root, release_dir, project, "addons"), "-clear", "-project="+work_drive]
+                    cmd = [addonbuilder, os.path.join(work_drive, prefix, module), os.path.join(make_root, release_dir, project, "addons"), "-clear", "-binarizeAllTextures", "-binarizeFullLogs", "-project="+work_drive]
                     if not do_binarize:
                         cmd.append("-packonly")
 

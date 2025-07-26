@@ -7,7 +7,6 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-            "ace_missileguidance",
             "CUP_Weapons_LoadOrder"
         };
         skipWhenMissingDependencies = 1;
@@ -17,6 +16,3 @@ class CfgPatches {
         addonRootClass = QUOTE(ADDON);
     };
 };
- 
-#include "\z\ace\addons\missileguidance\script_missileBases.hpp"
-#include "CfgAmmo.hpp"
