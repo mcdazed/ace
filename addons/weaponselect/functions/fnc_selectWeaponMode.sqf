@@ -27,11 +27,6 @@ if (currentWeapon _unit != _weapon) exitWith {
     _unit selectWeapon [_weapon, _muzzle, _currentWeaponMode];
 };
 
-// Unlock safety
-if ((["ace_safemode"] call EFUNC(common,isModLoaded)) && {[_unit, _weapon] call EFUNC(safemode,getWeaponSafety)}) exitWith {
-    [_unit, _weapon, false] call EFUNC(safemode,setWeaponSafety);
-};
-
 private _modes = _weapon call EFUNC(common,getWeaponModes);
 
 _unit selectWeapon [_weapon, _muzzle, _modes select (((_modes find _currentWeaponMode) + 1) % (count _modes))];

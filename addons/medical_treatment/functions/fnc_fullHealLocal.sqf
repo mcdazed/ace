@@ -20,11 +20,6 @@ TRACE_1("fullHealLocal",_patient);
 
 if (!alive _patient) exitWith {};
 
-// check if on fire, then put out the fire before healing
-if ((["ace_fire"] call EFUNC(common,isModLoaded)) && {[_patient] call EFUNC(fire,isBurning)}) then {
-    _patient setVariable [QEGVAR(fire,intensity), 0, true];
-};
-
 // Allow mods to heal
 [QGVAR(fullHealLocalMod), [_patient]] call CBA_fnc_localEvent;
 

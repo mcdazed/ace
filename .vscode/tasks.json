@@ -3,7 +3,7 @@
     "tasks": [
         {
             "label": "Validate Config",
-            "command": "${config:python.pythonPath}",
+            "command": "C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\python3.11.exe",
             "options": {
                 "cwd": "${workspaceFolder}/tools"
             },
@@ -13,7 +13,7 @@
         },
         {
             "label": "Validate Stringtables",
-            "command": "${config:python.pythonPath}",
+            "command": "C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\python3.11.exe",
             "options": {
                 "cwd": "${workspaceFolder}/tools"
             },
@@ -23,7 +23,7 @@
         },
         {
             "label": "Check Strings",
-            "command": "${config:python.pythonPath}",
+            "command": "C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\python3.11.exe",
             "options": {
                 "cwd": "${workspaceFolder}/tools"
             },
@@ -33,7 +33,7 @@
         },
         {
             "label": "SQFVM Checker",
-            "command": "${config:python.pythonPath}",
+            "command": "C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\python3.11.exe",
             "options": {
                 "cwd": "${workspaceFolder}/tools"
             },
@@ -44,7 +44,7 @@
         },
         {
             "label": "Validate headers",
-            "command": "${config:python.pythonPath}",
+            "command": "C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\python3.11.exe",
             "options": {
                 "cwd": "${workspaceFolder}/docs/tools"
             },
@@ -62,6 +62,7 @@
             "args": [
                 "check"
             ],
+            "problemMatcher": []
         },
         {
             "label": "Test All",
@@ -80,7 +81,7 @@
         },
         {
             "label": "Build: make.py (pboProject)",
-            "command": "${config:python.pythonPath}",
+            "command": "C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\python3.11.exe",
             "options": {
                 "cwd": "${workspaceFolder}/tools"
             },
