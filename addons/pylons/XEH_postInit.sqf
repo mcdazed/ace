@@ -12,7 +12,7 @@ GVAR(loadoutAction) = [ // create action
 
         private _vehicles = nearestObjects [_target, ["Air", "LandVehicle", "Slingload_base_F", "ReammoBox_F"], GVAR(searchDistance) + 10];
         private _isRearmVehicle = if (["ace_rearm"] call EFUNC(common,isModLoaded)) then {
-            _vehicles findIf {[_x] call EFUNC(rearm,isSource)} != -1;
+            //_vehicles findIf {[_x] call EFUNC(rearm,isSource)} != -1;
         } else {
             _vehicles findIf {getNumber ((configOf _x) >> "transportAmmo") > 0} != -1;
         };

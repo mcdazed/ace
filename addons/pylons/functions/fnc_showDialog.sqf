@@ -22,12 +22,12 @@ if (_isCurator && {!(["ace_zeus"] call EFUNC(common,isModLoaded))}) exitWith { W
 
 if !(typeOf _aircraft in GVAR(aircraftWithPylons)) exitWith {
     if (_isCurator) then {
-        [LSTRING(AircraftDoesntHavePylons)] call EFUNC(zeus,showMessage);
+        //[LSTRING(AircraftDoesntHavePylons)] call EFUNC(zeus,showMessage);
     };
 };
 
 if (_isCurator && {!GVAR(enabledForZeus)}) exitWith {
-    [LSTRING(ConfigurePylonsDisabledForZeus)] call EFUNC(zeus,showMessage);
+    //[LSTRING(ConfigurePylonsDisabledForZeus)] call EFUNC(zeus,showMessage);
 };
 
 private _currentUser = _aircraft getVariable [QGVAR(currentUser), objNull];
