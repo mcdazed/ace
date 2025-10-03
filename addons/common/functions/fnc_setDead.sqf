@@ -23,22 +23,3 @@ params [["_unit", objNull, [objNull]], ["_reason", "", [""]], ["_source", objNul
 if (!local _unit) exitWith {
     WARNING_1("setDead executed on non-local unit - %1",_this);
 };
-
-if (GETEGVAR(medical,enabled,false)) then {
-    [_unit, _reason, _source, _instigator] call EFUNC(medical_status,setDead);
-} else {
-    // From 'ace_medical_status_fnc_setDead': Kill the unit without changing visual appearance
-
-    // (#8803) Reenable damage if disabled to prevent having live units in dead state
-    // Keep this after death event for compatibility with third party hooks
-    if (!isDamageAllowed _unit) then {
-        WARNING_1("setDead executed on unit with damage blocked - %1",_this);
-        _unit allowDamage true;
-    };
-
-    private _currentDamage = _unit getHitPointDamage "HitHead";
-
-    _unit setHitPointDamage ["HitHead", 1, true, _source, _instigator];
-
-    _unit setHitPointDamage ["HitHead", _currentDamage, true, _source, _instigator];
-};

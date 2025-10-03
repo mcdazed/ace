@@ -59,11 +59,4 @@ TRACE_1("sending finger to",_sendFingerToPlayers);
 
 [QGVAR(fingered), [ACE_player, _fingerPosASL, _originASL vectorDistance _fingerPosASL], _sendFingerToPlayers] call CBA_fnc_targetEvent;
 
-// BI gestures do not work underwater, play custom "point" gesture if loaded
-if (["ace_gestures"] call EFUNC(common,isModLoaded)) then {
-    QEGVAR(gestures,point) call EFUNC(gestures,playSignal); // Works underwater
-} else {
-    [ACE_player, "GestureGo"] call EFUNC(common,doGesture); // Does not work underwater
-};
-
 true

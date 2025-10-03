@@ -51,8 +51,6 @@ DFUNC(replaceTerrainModelsAdd) = {
 
             if (isNull _object) exitWith {};
 
-            [_object, true, nil, nil, nil, true] call EFUNC(dragging,setCarryable);
-            [_object, true, nil, nil, nil, true] call EFUNC(dragging,setDraggable);
         }, [], 1] call CBA_fnc_waitAndExecute;
     };
     true

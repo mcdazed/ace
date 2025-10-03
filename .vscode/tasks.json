@@ -3,7 +3,7 @@
     "tasks": [
         {
             "label": "Validate Config",
-            "command": "${config:python.pythonPath}",
+            "command": "C:\\Python313\\python.exe",
             "options": {
                 "cwd": "${workspaceFolder}/tools"
             },
@@ -13,7 +13,7 @@
         },
         {
             "label": "Validate Stringtables",
-            "command": "${config:python.pythonPath}",
+            "command": "C:\\Python313\\python.exe",
             "options": {
                 "cwd": "${workspaceFolder}/tools"
             },
@@ -23,7 +23,7 @@
         },
         {
             "label": "Check Strings",
-            "command": "${config:python.pythonPath}",
+            "command": "C:\\Python313\\python.exe",
             "options": {
                 "cwd": "${workspaceFolder}/tools"
             },
@@ -33,7 +33,7 @@
         },
         {
             "label": "SQFVM Checker",
-            "command": "${config:python.pythonPath}",
+            "command": "C:\\Python313\\python.exe",
             "options": {
                 "cwd": "${workspaceFolder}/tools"
             },
@@ -44,7 +44,7 @@
         },
         {
             "label": "Validate headers",
-            "command": "${config:python.pythonPath}",
+            "command": "C:\\Python313\\python.exe",
             "options": {
                 "cwd": "${workspaceFolder}/docs/tools"
             },
@@ -62,6 +62,7 @@
             "args": [
                 "check"
             ],
+            "problemMatcher": []
         },
         {
             "label": "Test All",
@@ -80,7 +81,7 @@
         },
         {
             "label": "Build: make.py (pboProject)",
-            "command": "${config:python.pythonPath}",
+            "command": "C:\\Python313\\python.exe",
             "options": {
                 "cwd": "${workspaceFolder}/tools"
             },
@@ -100,6 +101,21 @@
             },
             "args": [
                 "build",
+                "-v"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Dev: HEMTT",
+            "command": "hemtt.exe",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "args": [
+                "dev",
                 "-v"
             ],
             "group": {
