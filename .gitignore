@@ -12,11 +12,8 @@ texHeaders.bin
 *.swp
 *.swo
 *.biprivatekey
-*.hemttprivatekey
 Thumbs.db
 CHANGELOG.md
-sqfvm.exe
-ArmaScriptCompiler.exe
 *.sqfc
 target/
 !extras/**/*.zip
