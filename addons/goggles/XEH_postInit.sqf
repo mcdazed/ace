@@ -11,7 +11,7 @@ if (!hasInterface) exitWith {};
     true
 },
 {false},
-[20, [true, true, false]], false] call CBA_fnc_addKeybind;
+[0, [false, false, false]], false] call CBA_fnc_addKeybind; // false
 
 
 ["CBA_settingsInitialized", {
