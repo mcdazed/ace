@@ -1893,6 +1893,7 @@
             <English>XQ-47B</English>
             <Japanese>XQ-47B</Japanese>
             <Russian>XQ-47B</Russian>
+            <Spanish>XQ-47B</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_SLAM_Name">
             <English>M4A1 SLAM</English>
@@ -3093,6 +3094,7 @@
             <English>GPBO-40</English>
             <Japanese>GPBO-40</Japanese>
             <Russian>GPBO-40</Russian>
+            <Spanish>GPBO-40</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MSBS65_GL_sand">
             <English>MSBS Grot GL (Sand)</English>
@@ -3242,6 +3244,7 @@
             <English>SIX-12</English>
             <Japanese>SIX-12</Japanese>
             <Russian>SIX-12</Russian>
+            <Spanish>SIX-12</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MSBS65_UBS_sand">
             <English>MSBS Grot SG (Sand)</English>

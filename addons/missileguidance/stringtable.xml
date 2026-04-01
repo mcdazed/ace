@@ -468,14 +468,16 @@
             <Ukrainian>Ракета - Вгору</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_GPS_ui_too_tooltip">
-            <English>Ordnance will guide to the location the targeting camera is looking at</English>
+            <English>Ordnance will be guided to the location the targeting camera is pointing at</English>
             <Japanese>兵装はターゲティングカメラで見ている場所へ誘導されます</Japanese>
             <Russian>Боеприпас будет направлен в то место, на которое смотрит камера наведения</Russian>
+            <Spanish>La munición será guiada hacia la ubicación a la que apunta la cámara de apuntado</Spanish>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_GPS_ui_pp_tooltip">
-            <English>Ordnance will guide to the provided 10 digit grid coordinates</English>
+            <English>Ordnance will be guided to the provided 10-digit grid coordinates</English>
             <Japanese>兵装は指定された10桁のグリッド座標に誘導されます</Japanese>
             <Russian>Боеприпас будет ориентироваться на предоставленные 10-значные координаты в сетке</Russian>
+            <Spanish>La munición será guiada a las coordenadas de cuadrícula de 10 dígitos proporcionadas.</Spanish>
         </Key>
     </Package>
 </Project>

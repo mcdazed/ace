@@ -6,36 +6,42 @@
             <German>Kreide (Schwarz)</German>
             <Russian>Мел (Черный)</Russian>
             <Japanese>チョーク (黒)</Japanese>
+            <Spanish>Tiza (Negra)</Spanish>
         </Key>
         <Key ID="STR_ACE_Tagging_ChalkBlue">
             <English>Chalk (Blue)</English>
             <German>Kreide (Blau)</German>
             <Russian>Мел (Синий)</Russian>
             <Japanese>チョーク (青)</Japanese>
+            <Spanish>Tiza (Azul)</Spanish>
         </Key>
         <Key ID="STR_ACE_Tagging_ChalkGreen">
             <English>Chalk (Green)</English>
             <German>Kreide (Grün)</German>
             <Russian>Мел (Зеленый)</Russian>
             <Japanese>チョーク (緑)</Japanese>
+            <Spanish>Tiza (Verde)</Spanish>
         </Key>
         <Key ID="STR_ACE_Tagging_ChalkRed">
             <English>Chalk (Red)</English>
             <German>Kreide (Rot)</German>
             <Russian>Мел (Красный)</Russian>
             <Japanese>チョーク (赤)</Japanese>
+            <Spanish>Tiza (Roja)</Spanish>
         </Key>
         <Key ID="STR_ACE_Tagging_ChalkWhite">
             <English>Chalk (White)</English>
             <German>Kreide (Weiß)</German>
             <Russian>Мел (Белый)</Russian>
             <Japanese>チョーク (白)</Japanese>
+            <Spanish>Tiza (Blanca)</Spanish>
         </Key>
         <Key ID="STR_ACE_Tagging_ChalkYellow">
             <English>Chalk (Yellow)</English>
             <German>Kreide (Gelb)</German>
             <Russian>Мел (Желтый)</Russian>
             <Japanese>チョーク (黄)</Japanese>
+            <Spanish>Tiza (Amarilla)</Spanish>
         </Key>
         <Key ID="STR_ACE_Tagging_LastUsed">
             <English>Last Used</English>
@@ -356,12 +362,13 @@
             <German>Ein Kreidestift um Wände zu markieren.</German>
             <Russian>Меловой маркер для разметки стен.</Russian>
             <Japanese>壁に目印を描くためのチョークマーカー。</Japanese>
+            <Spanish>Tiza para marcar paredes.</Spanish>
         </Key>
         <Key ID="STR_ACE_Tagging_descSpraypaint">
             <English>A can of spray paint for tagging walls.</English>
             <Czech>Plechovka se sprejem k vytváření značek.</Czech>
             <French>Une bombe de peinture en spray pour tagger les murs.</French>
-            <Spanish>Lata de pintura en aerosol para marcar.</Spanish>
+            <Spanish>Lata de pintura en aerosol para marcar paredes.</Spanish>
             <Italian>Una bomboletta spay per applicare marker sui muri.</Italian>
             <Polish>Farba w sprayu, służy do oznakowywania terenu.</Polish>
             <Portuguese>Uma lata de tinta spray para marcar paredes.</Portuguese>
