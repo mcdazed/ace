@@ -1,23 +1,26 @@
 #include "script_component.hpp"
 
 class CfgPatches {
-    class ADDON {
+    class SUBADDON {
         name = COMPONENT_NAME;
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"CUP_Weapons_LoadOrder"};
+        requiredAddons[] = {
+            "ace_compat_cwr3_baf",
+            "ace_csw"
+        };
         skipWhenMissingDependencies = 1;
         author = ECSTRING(common,ACETeam);
-        authors[] = {"Community Upgrade Project", "Mike"};
+        authors[] = {"CWR3", "drofseh"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
+
+        addonRootClass = QUOTE(ADDON);
     };
 };
 
-class Mode_SemiAuto;
-
-#include "CfgEventHandlers.hpp"
 #include "CfgMagazines.hpp"
+#include "CfgMagazineGroups.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"

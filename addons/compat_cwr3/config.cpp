@@ -6,18 +6,24 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"CUP_Weapons_LoadOrder"};
+        requiredAddons[] = {
+            "ace_common",
+            "cwr3_air_weapons",
+            "cwr3_crates",
+            "cwr3_optics",
+            "cwr3_vehicle_m41",
+            "cwr3_weapons"
+        };
         skipWhenMissingDependencies = 1;
         author = ECSTRING(common,ACETeam);
-        authors[] = {"Community Upgrade Project", "Mike"};
+        authors[] = {"CWR3", "drofseh"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };
 
-class Mode_SemiAuto;
-
-#include "CfgEventHandlers.hpp"
 #include "CfgMagazines.hpp"
-#include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
+#include "CfgVehicles.hpp"
+
+#include "ace_wardrobe.hpp"

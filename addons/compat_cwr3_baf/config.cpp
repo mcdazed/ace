@@ -6,18 +6,22 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"CUP_Weapons_LoadOrder"};
+        requiredAddons[] = {
+            "ace_compat_cwr3",
+            "cwr3_expansion_uk",
+            "cwr3_soldiers_uk"
+        };
         skipWhenMissingDependencies = 1;
         author = ECSTRING(common,ACETeam);
-        authors[] = {"Community Upgrade Project", "Mike"};
+        authors[] = {"CWR3", "drofseh"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };
 
-class Mode_SemiAuto;
-
-#include "CfgEventHandlers.hpp"
+// #include "CfgAmmo.hpp" // Uncomment when CWR3 updates
 #include "CfgMagazines.hpp"
-#include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
+#include "CfgVehicles.hpp"
+
+#include "ace_wardrobe.hpp"
