@@ -87,7 +87,7 @@
             "args": [
                 "make.py",
                 "ci"
-            ],
+            ], 
             "group": {
                 "kind": "build"
             }
@@ -99,7 +99,7 @@
                 "cwd": "${workspaceFolder}"
             },
             "args": [
-                "build",
+                "release",
                 "-v"
             ],
             "group": {
