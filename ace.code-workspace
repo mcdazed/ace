@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"compareFolders.excludeFilter": [
+			"/.github\\workflows",
+			"/docs"
+		]
+	}
+}

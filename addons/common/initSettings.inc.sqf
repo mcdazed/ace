@@ -98,8 +98,8 @@ private _categorySway = [_category, LSTRING(subcategory_sway)];
     "CHECKBOX",
     [LSTRING(EpilepsyFriendlyMode), LSTRING(EpilepsyFriendlyModeTooltip)],
     _category,
-    false,
-    2
+    true,
+    1
 ] call CBA_fnc_addSetting;
 
 [

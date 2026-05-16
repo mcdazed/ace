@@ -3,7 +3,6 @@
 release/*
 releases/*
 hemtt
-hemtt.exe
 .hemttout
 tools/temp
 *.cache
