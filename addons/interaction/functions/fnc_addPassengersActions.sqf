@@ -28,7 +28,8 @@ if !(_player in _vehicle || {[_player, _vehicle] call FUNC(canInteractWithVehicl
     _x params ["_unit", "_role"];
 
     private _icon = if (_unit getVariable [QEGVAR(captives,isHandcuffed), false] && {["ace_captives"] call EFUNC(common,isModLoaded)}) then {
-        QPATHTOEF(captives,UI\handcuff_ca.paa)
+        // McDAZED
+        //QPATHTOEF(captives,UI\handcuff_ca.paa)
     } else {
         [
             "A3\ui_f\data\IGUI\RscIngameUI\RscUnitInfo\role_driver_ca.paa",

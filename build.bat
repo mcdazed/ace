@@ -41,8 +41,13 @@ robocopy /s /e "%ROOTDIR%\addons\weaponselect" "%ROOTDIR%\addonsx\weaponselect" 
 rd /s /q "%ROOTDIR%\.hemttout"
 rd /s /q "%ROOTDIR%\addons"
 rd /s /q "%ROOTDIR%\optionals"
+rd /s /q "%ROOTDIR%\releases"
 
 md "%ROOTDIR%\optionals"
+
+del /s /q /f "%userprofile%\AppData\Local\Temp\*"
+robocopy "%userprofile%\AppData\Local\Temp" "%userprofile%\AppData\Local\Temp" /s /move
+mkdir "%userprofile%\AppData\Local\Temp"
 
 robocopy /s /e "%ROOTDIR%\addonsx" "%ROOTDIR%\addons" /move
 
@@ -52,10 +57,10 @@ pause
 
 cls
 hemtt dev
-hemtt release
+hemtt release -vv
+pause
 
 rd /s /q "%a3dir%\x"
 rd /s /q "%a3dir%\z"
-pause
 
 exit
