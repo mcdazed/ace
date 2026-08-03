@@ -38,8 +38,10 @@ robocopy /s /e "%ROOTDIR%\addons\ui" "%ROOTDIR%\addonsx\ui" /move
 robocopy /s /e "%ROOTDIR%\addons\viewrestriction" "%ROOTDIR%\addonsx\viewrestriction" /move
 robocopy /s /e "%ROOTDIR%\addons\weaponselect" "%ROOTDIR%\addonsx\weaponselect" /move
 
+rd /s /q "%ROOTDIR%\.hemttout"
 rd /s /q "%ROOTDIR%\addons"
 rd /s /q "%ROOTDIR%\optionals"
+
 md "%ROOTDIR%\optionals"
 
 robocopy /s /e "%ROOTDIR%\addonsx" "%ROOTDIR%\addons" /move
@@ -54,5 +56,6 @@ hemtt release
 
 rd /s /q "%a3dir%\x"
 rd /s /q "%a3dir%\z"
+pause
 
 exit
