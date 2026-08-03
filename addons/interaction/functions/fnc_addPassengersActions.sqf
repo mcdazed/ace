@@ -60,7 +60,10 @@ if !(_player in _vehicle || {[_player, _vehicle] call FUNC(canInteractWithVehicl
             {[0, 0, 0]},
             2,
             [false, false, false, true, false], // add run on hover (4th bit true)
-            {if (["ace_medical_gui"] call EFUNC(common,isModLoaded)) then {call EFUNC(medical_gui,modifyActionTriageLevel)}}
+            {if (["ace_medical_gui"] call EFUNC(common,isModLoaded)) then {
+                // McDAZED
+                //call EFUNC(medical_gui,modifyActionTriageLevel)
+                }}
         ] call EFUNC(interact_menu,createAction),
         [],
         _unit

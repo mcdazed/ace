@@ -27,10 +27,11 @@ if (currentWeapon _unit != _weapon) exitWith {
     _unit selectWeapon [_weapon, _muzzle, _currentWeaponMode];
 };
 
+// McDAZED
 // Unlock safety
-if ((["ace_safemode"] call EFUNC(common,isModLoaded)) && {[_unit, _weapon] call EFUNC(safemode,getWeaponSafety)}) exitWith {
-    [_unit, _weapon, false] call EFUNC(safemode,setWeaponSafety);
-};
+//if ((["ace_safemode"] call EFUNC(common,isModLoaded)) && {[_unit, _weapon] call EFUNC(safemode,getWeaponSafety)}) exitWith {
+    //[_unit, _weapon, false] call EFUNC(safemode,setWeaponSafety);
+//};
 
 private _modes = _weapon call EFUNC(common,getWeaponModes);
 

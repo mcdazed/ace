@@ -37,8 +37,9 @@ if (isNull (_unit getVariable [QGVAR(activeThrowable), objNull]) && {(currentThr
 
 // Temporarily enable wind info, to aid in throwing smoke grenades effectively
 if (GVAR(enableTempWindInfo) && {!(missionNamespace getVariable [QEGVAR(weather,WindInfo), false])}) then {
-    [] call EFUNC(weather,displayWindInfo);
-    GVAR(tempWindInfo) = true;
+    // MCDAZED
+    //[] call EFUNC(weather,displayWindInfo);
+    //GVAR(tempWindInfo) = true;
 };
 
 _unit setVariable [QGVAR(inHand), true];
