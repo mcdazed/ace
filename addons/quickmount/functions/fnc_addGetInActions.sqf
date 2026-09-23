@@ -54,7 +54,8 @@ private _modifierFunctionCrew = {
     _actionData set [1, [_unit, true] call EFUNC(common,getName)];
     if (["ace_medical_gui"] call EFUNC(common,isModLoaded)) then {
         _this set [0, _unit]; // == _target
-        call EFUNC(medical_gui,modifyActionTriageLevel);
+        // McDAZED
+        //call EFUNC(medical_gui,modifyActionTriageLevel);
     };
 };
 

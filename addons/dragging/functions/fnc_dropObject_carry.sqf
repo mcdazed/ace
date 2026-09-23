@@ -130,7 +130,8 @@ if (_loadCargo) then {
 
         if ([_cursorObject] isEqualTo _vehicles) then {
             if (GETEGVAR(medical,enabled,false)) then {
-                [_unit, _target, _cursorObject] call EFUNC(medical_treatment,loadUnit);
+                // McDAZED
+                //[_unit, _target, _cursorObject] call EFUNC(medical_treatment,loadUnit);
             } else {
                 [_unit, _target, _cursorObject] call EFUNC(common,loadPerson);
             };
